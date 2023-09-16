@@ -1,5 +1,6 @@
 /* App.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 .container {
   display: flex;
@@ -8,29 +9,84 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-image: url('https://images.pexels.com/photos/414659/pexels-photo-414659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-image: url("Background1.jpg");     /*https://iili.io/JHj99gs.md.jpg*/
   background-size: cover;
   background-position: center;
   font-family: 'Roboto', sans-serif;
+}
+
+
+.select-language{
+  background-color: #f96b24;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  outline-color: white;
+  border-color: white;
+  width: 60px;
+  height: 30px;
+  margin: 10px;
+ 
 }
 
 .select-box {
   margin-bottom: 10px;
 }
 
-.textarea {
+.output-label{
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: -15px;
+  margin-top: 20px;
+  text-align: center;
+  color: whitesmoke;
+}
+.output{
+  color: rgb(255, 255, 255);
+  background-color: #424242;
+  height: 90px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-top: 8px;
+  line-height: 1.3;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+output:hover{
+  cursor: none; 
+ }
+
+textarea {
   height: 300px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 8px;
 }
 
 .submit-button {
   margin-top: 10px;
+  font-size: 18px;
+  color: white;
+  border-color: whitesmoke;
+  background-color: #74bec8;
 }
 
-.outputbox {
+h1{
+  margin-bottom: 20px;
+  color: #74bec8;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+}
+
+/* .outputbox {
   margin-top: 15px;
   font-weight: bold;
   border-radius: 10px;
   padding: 5px;
   border: 1px solid rgb(89, 89, 89);
   font-family: 'Roboto', sans-serif;
-}
+} */
+
+

@@ -23,14 +23,16 @@ const handleSubmit = async () => {
 
   return (
     <div className='container'>
+     
       <h1>CompilerLab</h1>
-      <p>Online Compiler</p>
-      {/* <select>
-        <option value='java'>Java</option>
-        <option value='cpp'>C++</option>
-        <option value='c'>C</option>
-        <option value='py'>Python</option>
-      </select> */}
+
+          <select className='select-language'>
+            <option value='cpp'>C++</option>
+            <option value='java'>Java</option>
+            <option value='c'>C</option>
+            <option value='py'>Python</option>
+          </select>
+
        <textarea rows='20' cols='80' 
         value={code}
         onChange={(e)=>{
@@ -40,8 +42,13 @@ const handleSubmit = async () => {
       <button className='submit-button' onClick={handleSubmit}>
         Submit
         </button>
-        <p>{output}</p>
-    </div>
+        {/* <p className='output'>{output}</p> */}
+        <label className="output-label">Console Output:</label>
+        <textarea className='output' rows="20" cols="70" value={output}>
+        
+        </textarea>
+        </div>
+
   );
 }
 
