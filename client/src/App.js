@@ -22,6 +22,7 @@ const handleSubmit = async () => {
 };
 
   return (
+    <section>
     <div className='container'>
      
       <h1>CompilerLab</h1>
@@ -29,8 +30,8 @@ const handleSubmit = async () => {
           <select className='select-language'>
             <option value='cpp'>C++</option>
             <option value='java'>Java</option>
-            <option value='c'>C</option>
-            <option value='py'>Python</option>
+            {/* <option value='c'>C</option>
+            <option value='py'>Python</option> */}
           </select>
 
        <textarea rows='20' cols='80' 
@@ -48,7 +49,13 @@ const handleSubmit = async () => {
         
         </textarea>
         </div>
+          <footer className="footer">
+            <i className="liknedIn"></i>
+            <i className="github"></i>
+            <p>© Copyright 2023 CompilerLab</p>
 
+           </footer>
+        </section>
   );
 }
 
