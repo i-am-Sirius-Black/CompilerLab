@@ -1,22 +1,26 @@
-const fs= require('fs');
-const path= require('path');
-const {v4: uuid} = require('uuid');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { v4 as uuid } from 'uuid';
 
-const dirCodes =path.join(__dirname, 'codes');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-if(!fs.existsSync(dirCodes)){
-    fs.mkdirSync(dirCodes, { recursive:true} );
-}
-const generateFile= async (format, content) =>{     //format =language , content = code
-    const jobID = uuid(); //fsdfesf1232
-    const filename = `${jobID}.${format}`;  //fsdfesf1232.java
-    const filePath = path.join(dirCodes, filename);
-    await fs.writeFileSync(filePath, content);
-    return filePath; 
+// Construct the directory path to 'codes' within the current module's directory
+const dirCodes = path.join(__dirname, 'codes');
 
-    // console.log(jobID);
+// Check if the directory specified by 'dirCodes' does not exist
+if (!fs.existsSync(dirCodes)) {
+    // If the directory does not exist, create it including any necessary parent directories
+    fs.mkdirSync(dirCodes, { recursive: true });
 }
 
-module.exports ={
-    generateFile,
+const generateFile = async (format, content)=>{
+   const jobID = uuid();
+   const filename = `${jobID}.${format}`;
+   const filePath = path.join(dirCodes, filename);
+   await fs.writeFileSync(filePath, content);
+   return filePath;
 };
+
+export { generateFile };
